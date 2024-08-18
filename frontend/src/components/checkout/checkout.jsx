@@ -72,47 +72,7 @@ const Checkout = () => {
         }, 0);
     };
 
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-    //     const orderAmount = calculateTotal();
     
-    //     if (cartItems.length === 0) {
-    //         alert("Your cart is empty. Please add items to your cart before checking out.");
-    //         return;
-    //     }
-    
-    //     setLoading(true);
-    //     setSubmitError(null);
-    
-    //     try {
-    //         const response = await fetch('http://localhost:5000/checkout', {
-    //             method: 'POST',
-    //             headers: {
-    //                 'Content-Type': 'application/json',
-    //             },
-    //             body: JSON.stringify({
-    //                 paymentMethod,
-    //                 amount: orderAmount * 100,
-    //                 shippingInfo,
-    //                 userId: user._id,
-    //             }),
-    //         });
-    
-    //         const data = await response.json();
-    //         console.log("Checkout Response: ", data);
-    
-    //         if (data.success) {
-    //             navigate('/order-confirmation', { state: { orderId: data.orderDetails._id } }); // Pass the order ID
-    //         } else {
-    //             alert(`Order failed: ${data.error}`);
-    //         }
-    //     } catch (error) {
-    //         console.error('Error:', error);
-    //         alert('An error occurred while processing your order.');
-    //     } finally {
-    //         setLoading(false);
-    //     }
-    // };
     const handleSubmit = async (e) => {
         e.preventDefault();
         const orderAmount = calculateTotal();
@@ -124,16 +84,16 @@ const Checkout = () => {
     
         if (!user || !user._id) {
             alert("You must be logged in to place an order.");
-            return; // Exit early if user is not defined or does not have an _id
+            return; 
         }
     
         setLoading(true);
         setSubmitError(null);
     
         try {
-            // If payment method is cash on delivery
+           
             if (paymentMethod === 'cash') {
-                // Directly create the order without payment processing
+                
                 const orderResponse = await fetch('http://localhost:5000/checkout', {
                     method: 'POST',
                     headers: {
@@ -141,7 +101,7 @@ const Checkout = () => {
                     },
                     body: JSON.stringify({
                         paymentMethod,
-                        amount: orderAmount * 100, // You might want to track the amount for records
+                        amount: orderAmount * 100, 
                         shippingInfo,
                         userId: user._id,
                     }),
@@ -154,10 +114,10 @@ const Checkout = () => {
                     throw new Error(orderData.error);
                 }
     
-                // Navigate to order confirmation page
+                
                 navigate('/order-confirmation', { state: { orderId: orderData.orderDetails._id } });
             } else {
-                // Proceed with card payment
+               
                 const response = await fetch('http://localhost:5000/checkout', {
                     method: 'POST',
                     headers: {
@@ -180,7 +140,7 @@ const Checkout = () => {
     
                 const { clientSecret } = data;
     
-                // Confirm the payment on the client side
+              
                 const cardElement = elements.getElement(CardElement);
                 const paymentResult = await stripe.confirmCardPayment(clientSecret, {
                     payment_method: {
@@ -193,11 +153,11 @@ const Checkout = () => {
                 });
     
                 if (paymentResult.error) {
-                    // Show error to your customer
+                    
                     setPaymentError(paymentResult.error.message);
                     alert(`Payment failed: ${paymentResult.error.message}`);
                 } else {
-                    // Payment succeeded
+                   
                     if (paymentResult.paymentIntent.status === 'succeeded') {
                         navigate('/order-confirmation', { state: { orderId: data.orderDetails._id } });
                     }
