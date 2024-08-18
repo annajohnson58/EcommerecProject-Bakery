@@ -1,0 +1,155 @@
+/* 
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#F8EDE3;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 500px; 
+    padding: 20px;
+  }
+  
+  .login-form {
+    background-color:#DFD3C3;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px; 
+  }
+  
+  .login-form h2 {
+    margin-bottom: 20px;
+    color:darkred ;
+  }
+  
+  .login-form label {
+     width: 100%;
+    margin-bottom: 10px;
+    
+  }
+  
+  .login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+  }
+  
+  .login-form button {
+    width: 100%; 
+    padding: 10px;
+    background-color: green; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .login-form button:hover {
+    background-color:green; 
+  }
+  
+  .error-message {
+    color: red;
+    margin-bottom: 10px;
+  } */
+   /* login.css */
+
+/* Login.css */
+
+/* Login.css */
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  
+  background-position: center; /* Center the background image */
+  /* Full height of the viewport */
+}
+
+.login-container {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+  padding: 2rem;
+  border-radius: 12px; /* Softer corners for a friendly look */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+  width: 350px; /* Slightly wider for a more spacious feel */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #3b3b3b; /* Darker shade for better readability */
+  font-family: 'Cursive', sans-serif; /* A playful font to fit the bakery theme */
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: bold; /* Make the labels bold */
+}
+
+.input-label input {
+  width: 100%; /* Full width input */
+  padding: 0.7rem; /* More padding for comfort */
+  border: 1px solid #e5e5e5; /* Light border */
+  border-radius: 6px; /* Softer corners */
+  transition: border-color 0.3s;
+}
+
+.input-label input:focus {
+  border-color: #ff8c00; /* Warm color for focus state */
+  outline: none; /* Remove default outline */
+}
+
+.submit-button {
+  width: 100%; /* Full width button */
+  padding: 0.7rem; /* More padding for comfort */
+  background-color: #ff8c00; /* Warm orange color */
+  color: white;
+  border: none;
+  border-radius: 6px; /* Softer corners */
+  cursor: pointer;
+  font-size: 18px; /* Slightly larger font size */
+  transition: background-color 0.3s, transform 0.2s; /* Add transform for hover effect */
+}
+
+.submit-button:hover {
+  background-color: #ff6f00; /* Darker orange on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.error-message {
+  color: #ff0000; /* Red for error messages */
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: bold; /* Make error messages bold */
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+  .login-form {
+      width: 90%; /* Make form responsive on smaller screens */
+  }
+}
