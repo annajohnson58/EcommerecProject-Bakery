@@ -144,7 +144,7 @@ const ProductPage = () => {
                                         e.stopPropagation(); 
                                         handleWishlistToggle(product);
                                     }}>
-                                    {wishlist.forEach(item => item.productId == product._id) ? (
+                                    {wishlist.some(item => item.productId == product._id) ? (
                                         <HeartFilled color="red" size="2rem" /> 
                                     ) : (
                                         <HeartOutline color="gray" size="2rem" /> 
