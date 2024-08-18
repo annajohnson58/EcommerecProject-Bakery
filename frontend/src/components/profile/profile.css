@@ -1,0 +1,212 @@
+/* 
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f5f2; 
+}
+
+
+.profile-container {
+    max-width: 600px;
+    margin: 20px auto; 
+    padding: 20px; 
+    background: #ffffff; 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: box-shadow 0.3s ease; 
+}
+
+.profile-container:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.profile-container h1 {
+    font-size: 2.5em;
+    color: #8D493A; 
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.profile-form {
+    display: flex;
+    flex-direction: column; 
+}
+
+.form-group {
+    margin-bottom: 15px; 
+}
+
+label {
+    font-weight: bold; 
+    margin-bottom: 5px; 
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    font-size: 1em; 
+}
+
+
+.profile-button,
+.cancel-button,
+.edit-button {
+    padding: 10px 15px;
+    border: none; 
+    border-radius: 5px; 
+    font-size: 1em; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.profile-button {
+    background-color: #8D493A; 
+    color: white; 
+}
+
+.profile-button:hover {
+    background-color: #a65e52; 
+    transform: translateY(-2px); 
+}
+
+.cancel-button {
+    background-color: #ccc; 
+    color: #333; 
+}
+
+.cancel-button:hover {
+    background-color: #bbb;
+    transform: translateY(-2px); 
+}
+
+.edit-button {
+    background-color: #4CAF50; 
+    color: white; 
+}
+
+.edit-button:hover {
+    background-color: #45a049; 
+    transform: translateY(-2px); 
+}
+
+
+.profile-info {
+    margin-top: 20px; 
+    text-align: center; 
+}
+
+.profile-info p {
+    margin: 5px 0; 
+}
+
+
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 15px; 
+    }
+
+    .profile-container h1 {
+        font-size: 2em;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        font-size: 0.9em; 
+    }
+
+    .profile-button,
+    .cancel-button,
+    .edit-button {
+        font-size: 0.9em; 
+    }
+} */
+ /* Profile.css */
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    background-color:  #f8f5f2; /* Light gray background */
+}
+
+.profile-card {
+    background-color: #ffffff; /* White background for the card */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center text */
+    width: 300px; /* Fixed width for the card */
+    position: relative; /* Allow positioning of the logout icon */
+}
+
+.logout-container {
+    display: flex;
+    justify-content: flex-end; /* Align logout elements to the right */
+    align-items: center; /* Center vertically */
+    margin-bottom: 15px; /* Space below the logout section */
+}
+
+.logout-icon {
+    font-size: 24px; /* Icon size */
+    color:brown; /* Blue color for the icon */
+    cursor: pointer; /* Pointer cursor */
+    margin-right: 5px; /* Space between icon and text */
+}
+
+.logout-text {
+    font-size: 16px; /* Font size for logout text */
+    color: brown; /* Blue color for the text */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.logout-text:hover, .logout-icon:hover {
+    color: brown; /* Darker blue on hover */
+}
+
+.profile-welcome {
+    margin-bottom: 20px; /* Space below the welcome message */
+    color: #333; /* Dark gray color */
+}
+
+.profile-info {
+    margin-bottom: 20px; /* Space below the info section */
+    text-align: left; /* Align text to the left */
+}
+
+.profile-info p {
+    margin: 5px 0; /* Space between paragraphs */
+    color: #666; /* Medium gray color */
+}
+/* Additional styles for Profile.css */
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+
+.edit-form input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.edit-form button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #d10707d6;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-form button:hover {
+    background-color:#d10707d6 ;
+}

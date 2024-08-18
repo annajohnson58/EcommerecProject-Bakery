@@ -1,0 +1,85 @@
+/* Wrapper for the entire testimonial section */
+.work-section-wrapper {
+    padding: 20px; /* General padding */
+    max-width: 1200px; /* Limit maximum width */
+    margin: 0 auto; /* Center the section */
+    text-align: center; /* Center align text */
+}
+
+/* Top section for headings and subheading */
+.work-section-top {
+    margin-bottom: 40px; /* Space below the top section */
+}
+
+.primary-subheading {
+    font-size: 1.5em; /* Subheading size */
+    color: #590c0c; /* Color for subheading */
+}
+
+.primary-heading {
+    font-size: 2.5em; /* Heading size */
+    color: #5c0808; /* Darker color for visibility */
+}
+
+.primary-text {
+    font-size: 1.1em; /* Size for paragraph text */
+    color: #666; /* Lighter color for text */
+}
+
+/* Flex container for testimonials */
+.onebox {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    
+    justify-content: space-between; /* Center items horizontally */
+    gap: 2px; /* Space between testimonial boxes */
+}
+
+/* Individual testimonial box styling */
+.testimonial-section-bottom {
+    background: #fff; /* Background for each testimonial */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Padding for content */
+    width: 300px; /* Fixed width for testimonial boxes */
+    text-align: center; /* Center align text */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Testimonial image styling */
+.testimonial-section-bottom img {
+    width: 80px; /* Fixed width for images */
+    height: 80px; /* Fixed height for images */
+    border-radius: 50%; /* Circular image */
+    margin-bottom: 15px; /* Space below image */
+}
+
+/* Stars container for testimonials */
+.testimonials-stars-container {
+    margin: 10px 0; /* Space above and below stars */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .testimonial-section-bottom {
+        width: 90%; /* Full width for smaller screens */
+    }
+
+    .primary-heading {
+        font-size: 2em; /* Smaller heading size */
+    }
+
+    .primary-subheading {
+        font-size: 1.2em; /* Smaller subheading size */
+    }
+}
+
+@media (max-width: 480px) {
+    .primary-heading {
+        font-size: 1.5em; /* Further smaller heading size */
+    }
+
+    .primary-text {
+        font-size: 1em; /* Smaller paragraph text size */
+    }
+}

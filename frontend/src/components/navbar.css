@@ -1,0 +1,72 @@
+/* navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 100%;
+}
+
+.nav-logo-container {
+  flex: 1;
+}
+
+.navbar-logo {
+  height: 80px;
+  border-radius: 0%;
+}
+
+.navbar-links-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links-container a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #5e0f09;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.navbar-links-container a:hover {
+  color: var(--primary-color);
+}
+
+.navbar-cart-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.primary-button {
+  background-color: #5e0f09;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.primary-button:hover {
+  background-color: #4a0c08;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-links-container {
+      display: none; /* Hide links on small screens */
+  }
+
+  .navbar-menu-container {
+      display: block; /* Show menu icon on small screens */
+  }
+}

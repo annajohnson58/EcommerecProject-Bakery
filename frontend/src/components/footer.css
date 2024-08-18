@@ -1,0 +1,87 @@
+
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9; 
+    color: white; 
+    padding: 60px 20px; 
+    font-family: 'Arial', sans-serif;
+    border-top: 4px solid #9b2f23; 
+}
+
+.footer-section-one {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; /* Limit the width */
+    align-items: center;
+    margin-bottom: 40px; /* Increased margin for better separation */
+}
+
+.footer-logo-container img {
+    height: 100px; /* Adjusted height for better proportion */
+    width: auto; /* Maintain aspect ratio */
+    border-radius: 10%; /* Slightly rounded corners for the image */
+}
+
+.footer-icons {
+    display: flex;
+    gap: 20px; /* Spacing between icons */
+}
+
+.footer-icons svg {
+    color: #333; /* Icon color matching the text */
+    font-size: 28px; /* Increased icon size for better visibility */
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+.footer-icons svg:hover {
+    color: #ff6f61; /* Change color on hover for a vibrant effect */
+}
+
+.footer-section-columns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px; /* Spacing between columns */
+}
+
+.footer-section-columns span {
+    cursor: pointer; /* Indicate that these are clickable */
+    transition: color 0.3s; /* Transition for hover effect */
+    padding: 10px 0; /* Added padding for better spacing */
+    font-size: 16px; /* Standard font size for links */
+    font-weight: 500; /* Slightly bolder font for readability */
+}
+
+.footer-section-columns span:hover {
+    color: #ff6f61; /* Change color on hover */
+}
+
+/* Additional Responsive Styles */
+@media (min-width: 768px) {
+    .footer-wrapper {
+        flex-direction: row; /* Arrange footer items in a row on larger screens */
+        justify-content: space-between;
+        padding: 40px 60px; /* Added padding for larger screens */
+    }
+
+    .footer-section-columns {
+        flex: 1; /* Equal width for each column */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .footer-section-one {
+        margin-bottom: 20px; /* Adjusted margin for better separation */
+    }
+}
+
+/* Optional: Add some extra styling for the footer sections */
+.footer-section-columns {
+    margin-top: 20px; /* Margin above columns for better spacing */
+}
+
+.footer-section-columns span {
+    line-height: 1.6; /* Improved line height for readability */
+}

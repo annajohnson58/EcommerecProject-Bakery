@@ -1,0 +1,90 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f5f2; /* Light background for a bakery feel */
+}
+
+/* Product Details Styles */
+.product-details {
+    max-width: 800px; /* Set maximum width for the details section */
+    margin: 20px auto; /* Center the section */
+    padding: 20px; /* Padding around the content */
+    background: #ffffff; /* White background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center align text */
+}
+
+.product-details h1 {
+    font-size: 2.5em;
+    color: #8D493A; /* A warm brown color for headings */
+    margin-bottom: 10px;
+}
+
+.product-details img {
+    width: 100%; /* Full width image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners on images */
+    margin-bottom: 20px; /* Space below image */
+}
+
+.product-details p {
+    font-size: 1.2em;
+    color: #555; /* Darker gray for description */
+    margin-bottom: 20px; /* Space below description */
+}
+
+.product-details h2 {
+    font-size: 1.5em;
+    color: #8D493A; /* Price color matches the heading */
+    margin-bottom: 10px;
+}
+
+.rating {
+    margin-bottom: 20px; /* Space below rating */
+}
+
+.rating .star {
+    color: #FFD700; /* Gold color for stars */
+    font-size: 1.2em; /* Star size */
+}
+
+.rating .star.filled {
+    color: #FFD700; /* Gold color for filled stars */
+}
+
+/* Button Styles */
+.add-to-cart-button {
+    padding: 10px 20px;
+    background: #8D493A; /* Warm brown background for button */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.2em; /* Button text size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.add-to-cart-button:hover {
+    background: #a65e52; /* Darker shade on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .product-details {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    .product-details h1 {
+        font-size: 2em; /* Smaller heading on mobile */
+    }
+
+    .product-details h2 {
+        font-size: 1.3em; /* Smaller price on mobile */
+    }
+
+    .product-details p {
+        font-size: 1em; /* Smaller description on mobile */
+    }
+}

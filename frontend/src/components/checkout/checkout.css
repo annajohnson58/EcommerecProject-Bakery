@@ -1,0 +1,118 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f5f2; /* Light background for a bakery feel */
+}
+
+/* Checkout Container Styles */
+.checkout-container {
+    max-width: 900px; /* Set maximum width for the checkout */
+    margin: 20px auto; /* Center the checkout container */
+    padding: 20px; /* Padding around the content */
+    background: #ffffff; /* White background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Heading Styles */
+.checkout-container h1 {
+    font-size: 2.5em;
+    color: #8D493A; /* A warm brown color for headings */
+    margin-bottom: 20px;
+}
+
+/* Section Styles */
+.shipping-info-section,
+.order-summary-section {
+    margin-bottom: 20px; /* Space between sections */
+    padding: 15px;
+    border: 1px solid #ddd; /* Light border for sections */
+    border-radius: 8px; /* Rounded corners for sections */
+    background: #f9f9f9; /* Slightly darker background for sections */
+}
+
+.shipping-info-section h2,
+.order-summary-section h2 {
+    font-size: 1.8em; /* Heading size for sections */
+    color: #8D493A; /* Match section heading color */
+}
+
+/* Form Input Styles */
+input[type="text"],
+input[type="email"] {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Padding for inputs */
+    margin: 10px 0; /* Margin for spacing */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Order Summary Styles */
+.order-summary {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.order-summary li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Light border between items */
+}
+
+.order-summary li:last-child {
+    border-bottom: none; /* Remove border from last item */
+}
+
+/* Payment Information Styles */
+h2 {
+    margin-top: 20px; /* Space above payment information */
+}
+
+/* Stripe Card Element Styles */
+.CardElement {
+    padding: 10px; /* Padding for card input */
+    border: 1px solid #ddd; /* Light border for card input */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Error Message Styles */
+.error-message {
+    color: red; /* Red for error messages */
+    margin-top: 10px; /* Margin above error messages */
+}
+
+/* Checkout Button Styles */
+.checkout-button {
+    padding: 10px 20px;
+    background: #8D493A; /* Warm brown background for button */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.2em; /* Button text size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.checkout-button:hover {
+    background: #a65e52; /* Darker shade on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .checkout-container {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    .checkout-container h1 {
+        font-size: 2em; /* Smaller heading on mobile */
+    }
+
+    .shipping-info-section h2,
+    .order-summary-section h2 {
+        font-size: 1.5em; /* Smaller section heading on mobile */
+    }
+
+    .checkout-button {
+        font-size: 1em; /* Smaller button text on mobile */
+    }
+}
