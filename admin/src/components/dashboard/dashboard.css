@@ -1,0 +1,172 @@
+/* Main application container */
+.app {
+    padding: 20px; /* Unified padding */
+    margin: 10px auto; /* Centering the app */
+    max-width: 1200px; /* Limit the maximum width */
+    font-family: 'Arial', sans-serif; /* Default font */
+}
+
+/* Main heading styling */
+h1 {
+    color: #4a4a4a; 
+    margin-bottom: 30px; /* More space below the heading */
+    text-align: center; 
+    font-size: 2.5em; /* Increased font size for better visibility */
+}
+
+/* Row container for cards */
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px; /* More space below rows */
+    flex-wrap: wrap; 
+    gap: 40px;/* Allow wrapping on smaller screens */
+}
+
+/* Card styling */
+.card {
+    background: #fff; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); 
+    flex: 1;
+    margin: 10px; /* Uniform margin for spacing */
+    padding: 20px; /* Added padding */
+    width: 310px; /* Fixed width for cards */
+    height: fit-content; 
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+/* Container for card components */
+.cardsub {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Center content */
+    gap: 10px;
+}
+
+/* Hover effects for cards */
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); 
+}
+
+/* Card image styling */
+.card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px; /* Increased margin for better spacing */
+}
+
+/* Card title styling */
+.card h2 {
+    margin: 10px 0; /* Consistent margins */
+    color: #6a4a4a; 
+    font-weight: bold; 
+    font-size: 1.8em; /* Adjusted font size */
+}
+
+/* Products section */
+.products {
+    margin-top: 40px; /* Space above products section */
+}
+
+/* Styling for the products table */
+.products table {
+    width: 100%; /* Full width for responsiveness */
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border-radius: 8px; 
+    overflow: hidden; 
+}
+
+/* Table headers and cells */
+.products th, .products td {
+    padding: 15px; /* Increased padding for better readability */
+    border: 1px solid #d0b8a8; 
+    text-align: left;
+}
+
+.products th {
+    background: #d0b8a8; 
+    color: #fff; 
+    font-weight: bold; 
+}
+
+/* Pie chart styling */
+.pie-chart {
+    margin-top: 20px;
+    width: 100%; 
+    max-width: 500px; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+/* Row for additional cards or content */
+.row4 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: #fff; 
+    padding: 20px; 
+    border-radius: 12px; 
+}
+
+/* Card content alignment */
+.club1 {
+    flex: 1; 
+    margin: 0 10px;
+    text-align: center; 
+}
+
+/* Card paragraph styling */
+.card p {
+    font-size: 1.2em; /* Responsive font size */
+    font-family: 'Times New Roman', Times, serif;
+    color: #7a4a4a; 
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .row {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: center; /* Center align cards */
+    }
+
+    .card {
+        width: 90%; /* Full width on smaller screens */
+        margin: 15px 0; /* Margins between stacked cards */
+    }
+
+    .products table {
+        width: 100%; /* Full width for the table */
+    }
+}
+
+@media (max-width: 768px) {
+    .card h2 {
+        font-size: 1.5em; /* Smaller font size for headings on mobile */
+    }
+
+    .card p {
+        font-size: 1em; /* Smaller font size for paragraphs */
+    }
+
+    .products th, .products td {
+        padding: 10px; /* Adjust table padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Smaller font size for the main heading */
+    }
+
+    .card {
+        padding: 15px; /* Adjust padding for cards on mobile */
+    }
+
+    .pie-chart {
+        max-width: 100%; /* Make pie chart use full width */
+    }
+}
