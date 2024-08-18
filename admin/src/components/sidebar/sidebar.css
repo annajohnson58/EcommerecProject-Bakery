@@ -1,0 +1,203 @@
+ /* .sidebar {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    gap: 20px;
+    width: 100%;
+    max-width: 250px; 
+    height: 100vh; 
+    background: #D0B8A8; 
+   padding-bottom: 650px;
+    transition: transform 0.3s ease;
+   position: fixed;
+   margin-top: 0;
+   top: 0;
+}
+.nav-logo {
+    height: 60px; 
+    width: 60px;
+    cursor: pointer;
+    margin-left: 20px;
+    border-radius: 50%;
+    margin-top: 0px;
+     
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    margin: 0 20px; 
+    padding: 10px 15px;  
+    border-radius: 6px;
+    background: #F8EDE3;
+    gap: 10px; 
+    cursor: pointer; 
+    
+}
+
+
+.sidebar-item:hover {
+    background: #E2CFCF; 
+}
+
+
+@media (max-width: 800px) {
+    .sidebar {
+        padding: 15px; 
+        flex-direction: row;
+        width: 100%; 
+        max-width: none; 
+        height: auto; 
+        justify-content: center; 
+        position: relative; 
+         
+    }
+
+    .sidebar-item {
+        margin: 0; 
+        flex: 1;
+        justify-content: center; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .sidebar {
+        flex-direction: column; 
+        height: auto; 
+    }
+
+    .sidebar-item {
+        padding: 8px 10px; 
+        margin: 5px 0; 
+    }
+} 
+ 
+ */
+ /* sidebar.css */
+
+ .sidebar {
+    width: 175px; /* Fixed width for sidebar */
+    height: 100vh; /* Full viewport height */
+    background-color: #fff; /* White background for the sidebar */
+    border-right: 1px solid #eaeaea; /* Light border on the right */
+    display: flex;
+    flex-direction: column; /* Column layout */
+    padding: 20px; /* Padding around sidebar */
+    position: fixed; /* Fixed position */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    transition: transform 0.3s ease; /* Smooth transition for showing/hiding */
+    transform: translateX(0); /* Default position */
+}
+
+.sidebar.hidden {
+    transform: translateX(-100%); /* Move sidebar out of view */
+}
+
+.menu-bar {
+    display: none; /* Hide menu bar by default */
+    position: fixed; /* Fixed position */
+    top: 10px; /* Space from top */
+    left: 10px; /* Space from left */
+    background-color: #fff; /* Background color for menu bar */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    z-index: 1000; /* Ensure button is above other elements */
+}
+
+.logo {
+    width: 150px; /* Logo takes full width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 30px; /* Space below logo */
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    padding: 10px; /* Padding for each item */
+    margin: 10px 0; /* Margin between items */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+    color: #333; /* Dark text color */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.sidebar-item:hover {
+    background-color: #f0f4f8; /* Light background on hover */
+}
+
+.sidebar-item img {
+    width: 30px; /* Icon width */
+    height: 30px; /* Icon height */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.sidebar-item p {
+    font-size: 16px; /* Font size for text */
+    margin: 0; /* Remove default margin */
+}
+
+.sidebar-item-active {
+    background-color: #d2691e; /* Chocolate color for active item */
+    color: white; /* White text for active item */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) { /* For tablets and mobile devices */
+    .menu-bar {
+        display: block; /* Show toggle button */
+    }
+
+    .sidebar {
+        width: 100px; /* Reduced width for smaller screens */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .logo {
+        width: 120px; /* Adjust logo size */
+        margin-bottom: 20px; /* Adjust space below logo */
+    }
+
+    .sidebar-item {
+        padding: 8px; /* Reduce padding for items */
+    }
+
+    .sidebar-item img {
+        width: 25px; /* Reduce icon size */
+        height: 25px; /* Reduce icon size */
+    }
+
+    .sidebar-item p {
+        font-size: 14px; /* Reduce font size for text */
+    }
+}
+
+@media (max-width: 480px) { /* For very small mobile devices */
+    .sidebar {
+        width: 75px; /* Further reduce width for very small screens */
+        padding: 18px; /* Further reduce padding */
+    }
+
+    .logo {
+        width: 100px; /* Further adjust logo size */
+        margin-bottom: 15px; /* Further adjust space below logo */
+    }
+
+    .sidebar-item {
+        padding: 5px; /* Further reduce padding for items */
+    }
+
+    .sidebar-item img {
+        width: 20px; /* Further reduce icon size */
+        height: 20px; /* Further reduce icon size */
+    }
+
+    .sidebar-item p {
+        font-size: 12px; /* Further reduce font size for text */
+    }
+}

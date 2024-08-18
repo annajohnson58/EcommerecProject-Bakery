@@ -1,0 +1,231 @@
+/* 
+
+body {
+    background-color: #f9f9f9; 
+    font-family: 'Roboto', sans-serif; 
+}
+   
+
+.add-product {
+    max-width: 600px; 
+    margin-left: 750px ;
+    margin-top: 10px; 
+    padding: 20px;
+
+    background-color: white; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   
+}
+
+.sub {
+    display: flex; 
+    flex-direction: column; 
+    gap: 0px;
+}
+
+h2 {
+    color: #333; 
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+label {
+    margin-bottom: 2px;
+   
+    font-weight: bold; 
+}
+
+input[type="text"],
+input[type="file"],
+select {
+    width: 100%; 
+    padding: 5px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    margin-top: 2px;
+; 
+}
+
+.addproduct-price {
+    display: flex; 
+    justify-content: space-between; 
+}
+
+.add-product-selector {
+    margin-top: 5px; 
+}
+
+.addproduct-itemfield {
+    text-align: center; 
+    margin: 10px 0; 
+}
+
+.addproduct-thumbnail-img {
+    width: 100px; 
+    height: 60px; 
+    border: 2px dashed #ccc; 
+    border-radius: 4px; 
+    cursor: pointer; 
+}
+
+button.addproduct-button {
+    background-color:#6e2603 ; 
+    color: white; 
+    border: none; 
+    border-radius: 4px; 
+    padding: 10px 15px; 
+    cursor: pointer;
+    transition: background 0.3s; 
+    margin-top: 2px; 
+    width: 100%; 
+}
+
+button.addproduct-button:hover {
+    background-color:#D0B8A8 ; 
+}
+
+h4 {
+    text-align: center; 
+    color: #333; 
+}
+.add-category-button{
+    background-color: #e27640;
+    width: 300px;
+} */
+body {
+    background-color: #f9f9f9; 
+    font-family: 'Roboto', sans-serif; 
+}
+
+.add-product {
+    max-width: 600px; /* Limit maximum width */
+    margin: 10px 600px; /* Center the container horizontally */
+    padding: 30px; /* Padding for the container */
+    background-color: white; /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   
+    
+}
+
+.sub {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; 
+    gap: 0px; /* Stack items vertically */
+}
+
+h2 {
+    color: #333; /* Darker color for the heading */
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+label {
+    margin-bottom: 2px; /* Space below labels */
+    font-weight: bold; /* Bold font for labels */
+}
+
+
+select {
+    width: 100%; /* Full width of input fields */
+    padding: 5px; /* Padding for inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    margin-top: 2px; /* Space above inputs */
+}
+
+.addproduct-price {
+    display: flex; /* Flexbox for price input */
+    justify-content: space-between; /* Space between price label and input */
+}
+
+.add-product-selector {
+    margin-top: 5px; /* Space above select */
+}
+
+.addproduct-itemfield {
+    text-align: center; /* Center image upload area */
+    margin: 10px 0; /* Space above and below */
+}
+
+.addproduct-thumbnail-img {
+    width: 100px; /* Thumbnail size */
+    height: 60px; /* Thumbnail size */
+    border: 2px dashed #ccc; /* Dashed border for image area */
+    border-radius: 4px; /* Rounded corners for image area */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button.addproduct-button {
+    background-color: #6e2603; /* Background color for button */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s; /* Smooth background transition */
+    margin-top: 2px; /* Space above button */
+    width: 100%; /* Full width button */
+}
+
+button.addproduct-button:hover {
+    background-color: #D0B8A8; /* Darker shade on hover */
+}
+
+h4 {
+    text-align: center; /* Center status messages */
+    color: #333; /* Darker color for status messages */
+}
+
+.add-category-button {
+    background-color: #e27640;
+    width: 300px; /* Fixed width, can be adjusted for responsiveness */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) { /* For tablets and mobile devices */
+    .add-product {
+        margin: 10px 20px; /* Add margin on sides for smaller screens */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .add-category-button {
+        width: 100%; /* Full width button on smaller screens */
+    }
+
+    .addproduct-thumbnail-img {
+        width: 80px; /* Reduce thumbnail size */
+        height: 50px; /* Reduce thumbnail size */
+    }
+
+    button.addproduct-button {
+        padding: 8px 12px; /* Adjust padding for buttons */
+    }
+}
+
+@media (max-width: 480px) { /* For very small mobile devices */
+    .add-product {
+        margin: 10px 10px; /* Margin adjustment for very small screens */
+        padding: 10px; /* Further reduce padding */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Reduce heading size */
+    }
+
+    label,
+    h4 {
+        font-size: 0.9rem; /* Reduce font size for labels and messages */
+    }
+
+    input[type="text"],
+    input[type="file"],
+    select {
+        padding: 4px; /* Reduce padding for smaller inputs */
+    }
+
+    button.addproduct-button {
+        padding: 6px 10px; /* Further adjust button padding */
+    }
+}

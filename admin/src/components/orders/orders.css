@@ -1,0 +1,139 @@
+/* General styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #F8EDE3; /* Light pastry color */
+  color: #4a3d3d; /* Dark text color for contrast */
+  margin: 0; /* Remove default margin */
+}
+
+/* Orders container */
+.orders {
+  padding: 20px;
+  margin-left: 210px; /* Left margin for sidebar */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .orders {
+    margin-left: 0; /* Remove left margin on smaller screens */
+    padding: 10px; /* Reduced padding */
+  }
+}
+
+/* Navigation menu styles */
+.nav-menu {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Allow items to wrap */
+}
+
+.nav-menu li {
+  cursor: pointer;
+  font-weight: bold;
+  color: #58210b; /* Bakery brown color */
+  transition: color 0.3s;
+}
+
+/* Hover effect for menu items */
+.nav-menu li:hover {
+  color: #ff7f50; /* Coral color on hover */
+}
+
+/* Content styles */
+.content {
+  margin-top: 20px;
+}
+
+/* Orders table styles */
+.orders-table {
+  width: 100%; /* Full width table */
+  border-collapse: collapse; /* Collapse borders */
+}
+
+/* Table cell styles */
+.orders-table th,
+.orders-table td {
+  padding: 12px; /* Padding for cells */
+  border: 1px solid #ddd; /* Soft brown border */
+}
+
+/* Header styles for table */
+.orders-table th {
+  background: #D0B8A8; 
+  color: #fff; /* White text */
+  font-size: 1.1em; /* Larger font size for headers */
+}
+
+/* Font family for table rows */
+.orders-table tr {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Status label styles */
+.status-label {
+  padding: 5px 10px; /* More padding for better aesthetics */
+  border-radius: 8px; /* Rounded corners */
+  color: white; /* White text */
+  font-weight: bold; /* Bold text */
+}
+
+/* Status label background colors */
+.status-label.pending {
+  background: #ff6347; /* Tomato red for pending */
+}
+
+.status-label.shipped {
+  background: #ffa500; /* Orange for shipped */
+}
+
+.status-label.delivered {
+  background: #32cd32; /* Lime green for delivered */
+}
+
+.status-label.cancelled {
+  background: #808080; /* Grey for cancelled */
+}
+
+/* Button styles in table */
+.table button {
+  background-color: #b5651d; /* Bakery brown */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 8px 12px; /* Padding for buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Transition for background color */
+}
+
+/* Button hover effect */
+.table button:hover {
+  background-color: #ff7f50; /* Coral on hover */
+}
+
+/* Responsive styles for very small screens */
+@media (max-width: 480px) {
+  .nav-menu {
+    flex-direction: column; /* Stack menu items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .orders {
+    padding: 10px; /* Reduced padding */
+  }
+
+  .orders-table th,
+  .orders-table td {
+    padding: 8px; /* Reduced padding for small screens */
+    font-size: 14px; /* Smaller font size for table cells */
+  }
+
+  .table button {
+    width: 100%; /* Full width for buttons */
+    padding: 10px; /* Increase padding for buttons */
+    font-size: 14px; /* Smaller font size for buttons */
+  }
+}

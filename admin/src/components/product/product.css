@@ -1,0 +1,144 @@
+body {
+  background-color: #f4f4f4; /* Light background for contrast */
+  font-family: 'Roboto', sans-serif; /* Clean sans-serif font */
+  margin: 0;
+  margin-left: 560px; /* Remove default margin */
+}
+
+.mainp {
+  padding: 30px; /* Padding for the main container */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #ffffff; /* White background for the main container */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 1200px; /* Maximum width for the products container */
+  margin: 20px 390px; /* Centering the container */
+}
+
+/* Adjust margin for smaller screens */
+@media (max-width: 768px) {
+  .mainp {
+    margin-left: 20px; /* Reduce left margin */
+    margin-right: 20px; /* Reduce right margin */
+    padding: 20px; /* Reduce padding */
+  }
+
+  body {
+    margin-left: 0; /* Remove left margin for mobile */
+  }
+}
+
+.list-product {
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Align items vertically */
+  margin-bottom: 20px; /* Space below the product list */
+}
+
+h1 {
+  color: #6f4c3e; /* Dark brown color for the heading */
+  font-size: 2em; /* Larger font size for the heading */
+  margin-bottom: 10px; /* Space below the heading */
+}
+
+/* Adjust heading size for smaller screens */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5em; /* Smaller font size for mobile */
+  }
+}
+
+.add-product-icon {
+  cursor: pointer; /* Pointer cursor for clickable icon */
+  font-size: 24px; /* Size of the add product icon */
+  color: #6f4c3e; /* A brown color resembling bakery themes */
+  margin-right: 20px; /* Space between icon and heading */
+}
+
+/* Responsive input field */
+input[type="text"] {
+  padding: 10px; /* Padding for the search input */
+  border-radius: 4px; /* Rounded corners */
+  border: 1px solid #ccc; /* Light border */
+  margin-bottom: 20px; /* Spacing below the input */
+  width: 100%; /* Full width for input */
+  max-width: 300px; /* Maximum width for input */
+}
+
+/* Responsive section */
+.section {
+  overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+table {
+  width: 100%; /* Full width table */
+  border-collapse: collapse; /* Collapse borders */
+  background-color: white; /* White background for table */
+}
+
+th, td {
+  padding: 15px; /* Padding for table cells */
+  border: 1px solid #ddd; /* Light border */
+  text-align: left; /* Align text to the left */
+}
+
+/* Responsive header styles */
+th {
+  background-color: #D0B8A8; /* Background color for table header */
+  color: #fff; /* White text color for header */
+}
+
+/* Hover effect for table rows */
+tbody tr:hover {
+  background-color: #f1f1f1; /* Hover effect for table rows */
+}
+
+.product-item {
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Center alignment */
+  cursor: pointer; /* Pointer cursor for clickable area */
+  padding: 10px; /* Padding for product items */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #fff; /* White background for product items */
+  margin: 10px 0; /* Margin between product items */
+}
+
+/* Responsive product item image */
+.product-item img {
+  width: 40px; /* Icon size */
+  margin-right: 10px; /* Space between image and text */
+}
+
+/* Responsive delete icon */
+.fa-trash {
+  color: red; /* Red color for delete icon */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-right: 10px; /* Space between delete icon and button */
+}
+
+/* Media queries for additional responsiveness */
+@media (max-width: 768px) {
+  .product-item img {
+    width: 30px; /* Smaller icon size for mobile */
+  }
+
+  .mainp {
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  th, td {
+    padding: 10px; /* Adjust padding for table cells */
+  }
+
+  input[type="text"] {
+    max-width: 100%; /* Full width input on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2em; /* Further reduce font size for very small screens */
+  }
+
+  .add-product-icon {
+    font-size: 20px; /* Smaller size for the add product icon */
+  }
+}
