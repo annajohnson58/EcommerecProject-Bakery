@@ -1,0 +1,121 @@
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f5f2; 
+}
+
+
+.cart-container {
+    max-width: 900px; 
+    margin: 20px auto; 
+    padding: 20px; 
+    background: #ffffff; 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+}
+
+
+.cart-container h1 {
+    font-size: 2.5em;
+    color: #8D493A; 
+    margin-bottom: 20px;
+}
+
+
+.cart-table {
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-bottom: 20px; 
+}
+
+.cart-table th,
+.cart-table td {
+    padding: 10px; 
+    border: 1px solid #ddd; 
+}
+
+.cart-table th {
+    background-color: #f4f4f4; 
+    color: #333; 
+}
+
+.cart-table td {
+    text-align: left;
+}
+
+
+.cart-table img {
+    width: 100px; 
+    height: auto; 
+    border-radius: 5px; 
+}
+
+
+.cart-table input[type="number"] {
+    width: 60px; 
+    padding: 5px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+}
+
+
+.cart-table button {
+    padding: 5px 10px;
+    background: #8D493A; /* Warm brown background for button */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.cart-table button:hover {
+    background: #a65e52; /* Darker shade on hover */
+}
+
+/* Cart Summary Styles */
+.cart-summary {
+    margin-top: 20px; /* Space above summary */
+}
+
+.cart-summary h2 {
+    font-size: 1.8em;
+    color: #8D493A; /* Price color matches the heading */
+}
+
+.checkout-button {
+    padding: 10px 20px;
+    background: #8D493A; /* Warm brown background for button */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.2em; /* Button text size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.checkout-button:hover {
+    background: #a65e52; /* Darker shade on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .cart-container {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    .cart-container h1 {
+        font-size: 2em; /* Smaller heading on mobile */
+    }
+
+    .cart-table th,
+    .cart-table td {
+        padding: 8px; /* Reduce padding in table cells */
+    }
+
+    .cart-summary h2 {
+        font-size: 1.5em; /* Smaller summary text on mobile */
+    }
+}
