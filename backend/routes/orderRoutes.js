@@ -1,12 +1,12 @@
 
 
 const express = require('express');
-const Order = require('../models/order'); // Import Order model
+const Order = require('../models/order'); 
 const router = express.Router();
 const auth1 = require('./auth1');
 const jwt = require('jsonwebtoken');
 
-// Middleware to verify token and role
+
 const auth = async (req, res, next) => {
     const token = req.header('Authorization')?.replace('Bearer ', '');
     if (!token) return res.status(401).json({ message: 'Access denied. No token provided.' });
@@ -14,7 +14,7 @@ const auth = async (req, res, next) => {
     try {
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
         req.userId = decoded.userId;
-        req.isAdmin = decoded.role === 'admin'; // Check if the user is an admin
+        req.isAdmin = decoded.role === 'admin'; 
         next();
     } catch (error) {
         res.status(400).json({ message: 'Invalid token.' });
@@ -24,10 +24,10 @@ const auth = async (req, res, next) => {
 // Get all orders
 router.get('/', async (req, res) => {
    
-    console.log("Fetching all orders..."); // Log when the route is hit
+    console.log("Fetching all orders..."); 
     try {
         const orders = await Order.find().populate('userId','username email').populate('items.productId');
-        console.log("Orders fetched:", orders); // Log the fetched orders
+        console.log("Orders fetched:", orders);
         res.status(200).json(orders);
     } catch (error) {
         console.error('Error fetching orders:', error);
@@ -36,12 +36,12 @@ router.get('/', async (req, res) => {
 });
 router.get('/order/:orderId', auth, async (req, res) => {
         const { orderId } = req.params;
-        console.log("Fetching order with ID:", orderId); // Log the orderId being fetched
+        console.log("Fetching order with ID:", orderId); 
     
         try {
             const order = await Order.findById(orderId).populate('items.productId');
             if (!order) {
-                console.log(`Order with ID ${orderId} not found`); // Log not found
+                console.log(`Order with ID ${orderId} not found`); 
                 return res.status(404).json({ success: false, message: 'Order not found' });
             }
             res.status(200).json({ success: true, order });
@@ -51,34 +51,17 @@ router.get('/order/:orderId', auth, async (req, res) => {
         }
     });
 
-// Update order status
 
-// Update order status
-// router.put('/:id', async (req, res) => {
-//     const { status } = req.body; // Expecting status in request body
-//     try {
-//         const order = await Order.findByIdAndUpdate(req.params.id, { orderStatus: status }, { new: true })
-//             .populate('items.productId'); // Populate items to include product details
-//         if (!order) {
-//             return res.status(404).json({ message: 'Order not found' });
-//         }
-//         res.status(200).json(order); // Return the updated order with populated items
-//     } catch (error) {
-//         console.error('Error updating order status:', error);
-//         res.status(500).json({ message: 'Error updating order status', error: error.message });
-//     }
-// });
-// Update order status
 router.put('/:id', async (req, res) => {
-    const { status } = req.body; // Expecting status in request body
+    const { status } = req.body;
     try {
         const order = await Order.findByIdAndUpdate(req.params.id, { orderStatus: status }, { new: true })
-            .populate('userId', 'username email') // Populate userId to include user details
-            .populate('items.productId'); // Populate items to include product details
+            .populate('userId', 'username email') 
+            .populate('items.productId'); 
         if (!order) {
             return res.status(404).json({ message: 'Order not found' });
         }
-        res.status(200).json(order); // Return the updated order with populated fields
+        res.status(200).json(order); 
     } catch (error) {
         console.error('Error updating order status:', error);
         res.status(500).json({ message: 'Error updating order status', error: error.message });
