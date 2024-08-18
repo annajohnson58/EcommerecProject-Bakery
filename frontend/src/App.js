@@ -3,23 +3,23 @@ import "./App.css";
 
 import {BrowserRouter, Route, Routes } from 'react-router-dom';
 import { UserProvider } from "./context/UserContext";
-import Home from "./Components/Home";
- import About from "./Components/About";
- import Work from "./Components/Work";
- import Testimonial from "./Components/Testimonial";
- import Contact from "./Components/Contact";
+import Home from "./components/Home";
+ import About from "./components/About";
+ import Work from "./components/Work";
+ import Testimonial from "./components/Testimonial";
+ import Contact from "./components/Contact";
 //  import Footer from "./Components/Footer";
 // import Navbar from "./Components/Navbar";
-import Cart from "./Components/cart/cart";
-import Checkout from "./Components/checkout/checkout";
-import  Profile  from "./Components/profile/profile";
-import ProductPage from "./Components/product/products";
-import ProductDetails from "./Components/product/productdetails";
-import Login from "./Components/profile/signin";
-import Register from "./Components/profile/signup";
-import Navbar from "./Components/Navbar";
-import Wishlist from "./Components/wishlist/wishlist";
-import OrderConfirmation from "./Components/order-confirmation";
+import Cart from "./components/cart/cart";
+import Checkout from "./components/checkout/checkout";
+import  Profile  from "./components/profile/profile";
+import ProductPage from "./components/product/products";
+import ProductDetails from "./components/product/productdetails";
+import Login from "./components/profile/signin";
+import Register from "./components/profile/signup";
+import Navbar from "./components/Navbar";
+import Wishlist from "./components/wishlist/wishlist";
+import OrderConfirmation from "./components/order-confirmation";
 
 
 function App() {
