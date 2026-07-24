@@ -24,7 +24,7 @@ const Wishlist = () => {
         if (!user || !user._id) return;
 
         try {
-            const response = await fetch(`http://localhost:5000/wishlist/${user._id}`, {
+            const response = await fetch(`https://ecommerecproject-bakery.onrender.com/wishlist/${user._id}`, {
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`,
                 },
@@ -45,7 +45,7 @@ const Wishlist = () => {
         if (!user || !user._id) return;
 
         try {
-            const response = await fetch('http://localhost:5000/cart/add', {
+            const response = await fetch('https://ecommerecproject-bakery.onrender.com/cart/add', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ const Wishlist = () => {
         if (!user || !user._id) return;
 
         try {
-            const response = await fetch(`http://localhost:5000/wishlist/remove/${id}`, {
+            const response = await fetch(`https://ecommerecproject-bakery.onrender.com/wishlist/remove/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`,
