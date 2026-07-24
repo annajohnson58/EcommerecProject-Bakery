@@ -39,7 +39,7 @@ const UpdateProduct = () => {
         }
 
         try {
-            const response = await fetch(`http://localhost:5000/products/${product._id}`, {
+            const response = await fetch(`https://ecommerecproject-bakery.onrender.com/products/${product._id}`, {
                 method: 'PUT',
                 body: formData,
             });
