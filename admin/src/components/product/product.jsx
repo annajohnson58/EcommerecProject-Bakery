@@ -15,7 +15,7 @@ const Product = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await fetch('http://localhost:5000/products');
+                const response = await fetch('https://ecommerecproject-bakery.onrender.com/products');
                 if (!response.ok) {
                     throw new Error('Failed to fetch products');
                 }
@@ -32,7 +32,7 @@ const Product = () => {
 
     const sendTotalProductsToServer = async (totalCount) => {
         try {
-            const response = await fetch('http://localhost:5000/dashboard/total-products', {
+            const response = await fetch('https://ecommerecproject-bakery.onrender.com/dashboard/total-products', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ const Product = () => {
 
     const handleDelete = async (id) => {
         try {
-            const response = await fetch(`http://localhost:5000/products/${id}`, {
+            const response = await fetch(`https://ecommerecproject-bakery.onrender.com/products/${id}`, {
                 method: 'DELETE',
             });
 
