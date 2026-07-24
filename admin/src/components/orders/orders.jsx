@@ -17,7 +17,7 @@ const Order = () => {
         const fetchOrders = async () => {
             setLoading(true);
             try {
-                const response = await fetch('http://localhost:5000/orders');
+                const response = await fetch('https://ecommerecproject-bakery.onrender.com/orders');
                 if (!response.ok) throw new Error('Failed to fetch orders');
                 const data = await response.json();
                 setOrders(data);
@@ -38,7 +38,7 @@ const Order = () => {
         console.log("Fetching products for IDs:", productIds); // Debugging line
 
         try {
-            const response = await fetch(`http://localhost:5000/products?ids=${productIds.join(',')}`);
+            const response = await fetch(`https://ecommerecproject-bakery.onrender.com/products?ids=${productIds.join(',')}`);
             if (!response.ok) throw new Error('Failed to fetch products');
             const productData = await response.json();
             console.log("Fetched product data:", productData); // Debugging line
@@ -87,7 +87,7 @@ const Order = () => {
         };
 
         try {
-            const response = await fetch('http://localhost:5000/dashboard/statistics', {
+            const response = await fetch('https://ecommerecproject-bakery.onrender.com/dashboard/statistics', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -147,7 +147,7 @@ const Order = () => {
 
         if (sortedProducts.length > 0) {
             try {
-                const response = await fetch('http://localhost:5000/dashboard/top-products', {
+                const response = await fetch('https://ecommerecproject-bakery.onrender.com/dashboard/top-products', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -167,7 +167,7 @@ const Order = () => {
 
     const updateOrderStatus = async (id, newStatus) => {
         try {
-            const response = await fetch(`http://localhost:5000/orders/${id}`, {
+            const response = await fetch(`https://ecommerecproject-bakery.onrender.com/orders/${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ status: newStatus }),
@@ -193,7 +193,7 @@ const Order = () => {
         if (!confirmDelete) return;
 
         try {
-            const response = await fetch(`http://localhost:5000/orders/${id}`, {
+            const response = await fetch(`https://ecommerecproject-bakery.onrender.com/orders/${id}`, {
                 method: 'DELETE',
             });
 
