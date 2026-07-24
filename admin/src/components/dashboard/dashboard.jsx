@@ -18,7 +18,7 @@ const Dashboard = () => {
     useEffect(() => {
         const fetchDashboardData = async () => {
             try {
-                const response = await fetch('http://localhost:5000/dashboard/data');
+                const response = await fetch('https://ecommerecproject-bakery.onrender.com/dashboard/data');
                 if (!response.ok) throw new Error('Failed to fetch dashboard data');
                 const fetchedData = await response.json();
                 setData(fetchedData);
@@ -30,7 +30,7 @@ const Dashboard = () => {
         };
         const fetchRegistrationsByDay = async () => {
               try {
-                const response = await fetch('http://localhost:5000/users/registrations-by-day');
+                const response = await fetch('https://ecommerecproject-bakery.onrender.com/users/registrations-by-day');
                 const data = await response.json();
                 setRegistrations(data); // Directly set the array
               } catch (err) {
@@ -40,7 +40,7 @@ const Dashboard = () => {
             };
           const fetchTotalLogins = async () => {
             try {
-                const response = await fetch('http://localhost:5000/users/total-registrations');
+                const response = await fetch('https://ecommerecproject-bakery.onrender.com/users/total-registrations');
                 const data = await response.json();
                 setTotalLogins(data.totalRegistrations);
             } catch (err) {
