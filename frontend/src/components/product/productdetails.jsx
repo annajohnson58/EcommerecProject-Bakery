@@ -15,7 +15,7 @@ const ProductDetails = () => {
 
     const fetchProductDetails = async () => {
         try {
-            const response = await fetch(`http://localhost:5000/products/${id}`); 
+            const response = await fetch(`https://ecommerecproject-bakery.onrender.com/products/${id}`); 
             if (!response.ok) {
                 throw new Error('Failed to fetch product details');
             }
@@ -36,7 +36,7 @@ navigate('/signin')
             return;
         }
         try {
-            const response = await fetch('http://localhost:5000/cart/add', {
+            const response = await fetch('https://ecommerecproject-bakery.onrender.com/cart/add', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
