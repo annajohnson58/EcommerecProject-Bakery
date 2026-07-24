@@ -18,7 +18,7 @@ const ProductPage = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await fetch('http://localhost:5000/products');
+                const response = await fetch('https://ecommerecproject-bakery.onrender.com/products');
                 if (!response.ok) throw new Error('Failed to fetch products.');
                 const data = await response.json();
                 setProducts(data);
@@ -37,7 +37,7 @@ const ProductPage = () => {
         const fetchWishlist = async () => {
             if (user && user._id) {
                 try {
-                    const response = await fetch(`http://localhost:5000/wishlist/${user._id}`, {
+                    const response = await fetch(`https://ecommerecproject-bakery.onrender.com/wishlist/${user._id}`, {
                         headers: {
                             'Authorization': `Bearer ${localStorage.getItem('token')}`,
                         },
@@ -75,7 +75,7 @@ const ProductPage = () => {
         try {
             if (wishlistItem) {
                 
-                const response = await fetch(`http://localhost:5000/wishlist/remove/${wishlistItem._id}`, {
+                const response = await fetch(`https://ecommerecproject-bakery.onrender.com/wishlist/remove/${wishlistItem._id}`, {
                     method: 'DELETE',
                     headers: {
                         'Authorization': `Bearer ${localStorage.getItem('token')}`,
@@ -92,7 +92,7 @@ const ProductPage = () => {
                 console.log(`Removed from wishlist: ${product.name}`);
             } else {
                 
-                const response = await fetch('http://localhost:5000/wishlist', {
+                const response = await fetch('https://ecommerecproject-bakery.onrender.com/wishlist', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
