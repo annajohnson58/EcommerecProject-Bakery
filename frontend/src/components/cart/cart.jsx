@@ -25,7 +25,7 @@ const Cart = () => {
         if (!user || !user._id) return;
 
         try {
-            const response = await fetch(`http://localhost:5000/cart/${user._id}`, {
+            const response = await fetch(`https://ecommerecproject-bakery.onrender.com/cart/${user._id}`, {
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`,
                 },
@@ -60,7 +60,7 @@ const Cart = () => {
         );
 
         try {
-            const response = await fetch('http://localhost:5000/cart/update', {
+            const response = await fetch('https://ecommerecproject-bakery.onrender.com/cart/update', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ const Cart = () => {
         );
 
         try {
-            const response = await fetch(`http://localhost:5000/cart/remove/${itemId}`, {
+            const response = await fetch(`https://ecommerecproject-bakery.onrender.com/cart/remove/${itemId}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`,
