@@ -19,7 +19,7 @@ const OrderConfirmation = () => {
             }
 
             try {
-                const response = await fetch(`http://localhost:5000/orders/order/${orderId}`, {
+                const response = await fetch(`https://ecommerecproject-bakery.onrender.com/orders/order/${orderId}`, {
                     headers: {
                         'Authorization': `Bearer ${localStorage.getItem('token')}` // Fixed quotation marks
                     }
