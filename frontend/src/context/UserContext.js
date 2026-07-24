@@ -18,7 +18,7 @@
     
         const fetchUserDetails = async (token) => {
             try {
-                const response = await fetch('http://localhost:5000/users', {
+                const response = await fetch('https://ecommerecproject-bakery.onrender.com/users', {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
