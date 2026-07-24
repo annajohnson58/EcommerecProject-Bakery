@@ -34,7 +34,7 @@ const Register = () => {
         setError('');
         const role = isAdmin ? 'admin' : 'user';
 
-        axios.post('http://localhost:5000/users/signup', { 
+        axios.post('https://ecommerecproject-bakery.onrender.com/users/signup', { 
             username, 
             email, 
             password, 
