@@ -5,7 +5,7 @@ import { FaCartPlus, FaTrash } from 'react-icons/fa';
 import './wishlist.css';
 
 const Wishlist = () => {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const { user } = useUser();
     const [wishlistItems, setWishlistItems] = useState([]);
     const [error, setError] = useState(null);
