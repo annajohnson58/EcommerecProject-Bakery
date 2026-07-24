@@ -45,7 +45,7 @@ const Checkout = () => {
             return;
         }
 
-        const response = await fetch(`http://localhost:5000/cart/${user._id}`, {
+        const response = await fetch(`https://ecommerecproject-bakery.onrender.com/cart/${user._id}`, {
             headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` } // Assuming token is stored in local storage
         });
         
@@ -94,7 +94,7 @@ const Checkout = () => {
            
             if (paymentMethod === 'cash') {
                 
-                const orderResponse = await fetch('http://localhost:5000/checkout', {
+                const orderResponse = await fetch('https://ecommerecproject-bakery.onrender.com/checkout', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -118,7 +118,7 @@ const Checkout = () => {
                 navigate('/order-confirmation', { state: { orderId: orderData.orderDetails._id } });
             } else {
                
-                const response = await fetch('http://localhost:5000/checkout', {
+                const response = await fetch('https://ecommerecproject-bakery.onrender.com/checkout', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
