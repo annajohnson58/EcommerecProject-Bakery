@@ -10,7 +10,7 @@ const User = () => {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await fetch('http://localhost:5000/users', {
+                const response = await fetch('https://ecommerecproject-bakery.onrender.com/users', {
                     headers: {
                         'Authorization': `Bearer ${localStorage.getItem('token')}`
                     }
@@ -36,7 +36,7 @@ const User = () => {
     const handleDelete = async (id) => {
         if (window.confirm(`Are you sure you want to delete user with ID: ${id}?`)) {
             try {
-                const response = await fetch(`http://localhost:5000/users/${id}`, {
+                const response = await fetch(`https://ecommerecproject-bakery.onrender.com/users/${id}`, {
                     method: 'DELETE',
                     headers: {
                         'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -60,7 +60,7 @@ const User = () => {
 
     const handleBlockUser = async (id) => {
         try {
-            const response = await fetch(`http://localhost:5000/users/${id}/block`, {
+            const response = await fetch(`https://ecommerecproject-bakery.onrender.com/users/${id}/block`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
