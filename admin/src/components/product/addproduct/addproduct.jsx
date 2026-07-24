@@ -39,7 +39,7 @@ const Addproduct = () => {
         formData.append('image', image);
 
         try {
-            const response = await fetch('http://localhost:5000/products', {
+            const response = await fetch('https://ecommerecproject-bakery.onrender.com/products', {
                 method: 'POST',
                 body: formData,
             });
