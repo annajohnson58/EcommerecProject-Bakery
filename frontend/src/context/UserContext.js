@@ -16,26 +16,29 @@
             }
         }, []);
     
-        const fetchUserDetails = async (token) => {
-            try {
-                const response = await fetch('https://ecommerecproject-bakery.onrender.com/users', {
-                    headers: {
-                        Authorization: `Bearer ${token}`,
-                    },
-                });
-    
-                if (!response.ok) {
-                    throw new Error('Failed to fetch user details');
-                }
-    
-                const data = await response.json();
-                setUser(data);
-                console.log('Fetched User Data:', data); // Make sure this logs the user object with _id
-            } catch (error) {
-                console.error('Error fetching user details:', error);
-                setUser(null); // Clear user state on error
-            }
-        };
+        const API_URL = process.env.REACT_APP_API_URL || 'https://ecommerecproject-bakery.onrender.com';
+
+const fetchUserDetails = async (token) => {
+    try {
+        const response = await fetch(`${API_URL}/users/me`, {
+            headers: { Authorization: `Bearer ${token}` },
+        });
+
+        if (response.status === 401) {
+            // token expired or invalid: treat as logged out
+            localStorage.removeItem('token');
+            setUser(null);
+            return;
+        }
+        if (!response.ok) throw new Error('Failed to fetch user details');
+
+        const data = await response.json();
+        setUser(data);
+    } catch (error) {
+        console.error('Error fetching user details:', error);
+        setUser(null);
+    }
+};
         const logout = () => {
                     setUser(null);
                     localStorage.removeItem('token');

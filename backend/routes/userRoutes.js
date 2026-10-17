@@ -16,9 +16,20 @@ const auth = async (req, res, next) => {
         req.isAdmin = decoded.role === 'admin'; 
         next();
     } catch (error) {
-        res.status(400).json({ message: 'Invalid token.' });
-    }
+    const message = error.name === 'TokenExpiredError' ? 'Token expired' : 'Invalid token';
+    res.status(401).json({ message });
+}
 };
+
+router.get('/me', auth, async (req, res) => {
+  try {
+    const user = await User.findById(req.userId).select('-password');
+    if (!user) return res.status(404).json({ message: 'User not found' });
+    res.json(user);
+  } catch (error) {
+    res.status(500).json({ message: 'Error fetching user' });
+  }
+});
 
 
 router.get('/', auth, async (req, res) => {
