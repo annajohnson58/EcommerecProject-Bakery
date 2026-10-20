@@ -13,15 +13,13 @@ A full-stack e-commerce web application for a bakery, built with **MongoDB, Expr
 
 | Home Page | Product Page |
 |-----------|--------------|
-| ![Home](<img width="1906" height="881" alt="Screenshot 2026-10-20 215553" src="https://github.com/user-attachments/assets/f427598e-dc40-495c-a645-a05642499eda" />
-) | ![Product](<img width="1887" height="852" alt="Screenshot 2026-10-20 215725" src="https://github.com/user-attachments/assets/685f011d-8204-4e96-b511-bd3ffc79b7ea" />
-) |
+| <img width="100%" height="881" alt="Home Page" src="https://github.com/user-attachments/assets/f427598e-dc40-495c-a645-a05642499eda" /> | <img width="100%" height="852" alt="Product Page" src="https://github.com/user-attachments/assets/685f011d-8204-4e96-b511-bd3ffc79b7ea" /> |
 
 | Cart & Checkout | Admin Dashboard |
 |-----------------|-----------------|
-| ![Cart](<img width="1917" height="881" alt="Screenshot 2026-10-20 215816" src="https://github.com/user-attachments/assets/e3dcd41b-5548-4f1e-93a0-e71cbf758c45" />
-) | ![Admin](<img width="1917" height="831" alt="Screenshot 2026-10-20 220112" src="https://github.com/user-attachments/assets/e57e9e25-5f9b-461d-a9c1-9ef0cdf84bc9" />
-) |
+| <img width="100%" height="881" alt="Cart & Checkout" src="https://github.com/user-attachments/assets/e3dcd41b-5548-4f1e-93a0-e71cbf758c45" /> | <img width="100%" height="831" alt="Admin Dashboard" src="https://github.com/user-attachments/assets/e57e9e25-5f9b-461d-a9c1-9ef0cdf84bc9" /> |
+
+---
 
 ---
 
@@ -57,14 +55,14 @@ A full-stack e-commerce web application for a bakery, built with **MongoDB, Expr
 
 ## 📁 Project Structure
 
-
+```
 EcommerecProject-Bakery/
 ├── frontend/   # Customer-facing React app
 ├── admin/      # Admin dashboard (React)
 ├── backend/    # Node.js + Express REST API
 └── README.md
 
-
+```
 ---
 
 ##  Getting Started
@@ -91,7 +89,7 @@ Create a `.env` file inside `backend/`:
 PORT=4000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
-# Add payment keys here if used, e.g. STRIPE_SECRET_KEY=your_key
+
 ```
 
 Start the server:
@@ -113,20 +111,11 @@ npm install
 npm start
 ```
 
-> **Note:** If your scripts differ (for example `npm run dev`), update the commands above to match each folder's `package.json`.
 
 ---
 
 
 
-## What I Learned
-
-- Building a complete **MERN** application from scratch, including a separate admin interface
-- Designing a **REST API** with Express and structuring data with **Mongoose** schemas
-- Implementing **authentication and role-based authorisation**
-- Managing application state and **cart logic** in React
-- Handling **order flow and payment integration**
-- Using **Git and GitHub** for version control across 30+ commits
 
 ---
 
